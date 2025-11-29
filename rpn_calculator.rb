@@ -45,7 +45,7 @@ class RpnCalculator
       elsif token == '('
         operators.push(token)
       elsif token == ')'
-        while operators.last != '('
+        while !operators.empty? && operators.last != '('
           output.push(operators.pop)
         end
         operators.pop

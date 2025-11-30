@@ -54,6 +54,10 @@ class RpnCalculator
       end
     end
 
-    output.concat(operators.reverse)
+    while !operators.empty?
+      output.push(operators.pop)
+    end
+
+    output
   end
 end
